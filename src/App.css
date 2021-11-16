@@ -1,3 +1,4 @@
+
 .title{
   text-align: center;
 }
@@ -17,12 +18,22 @@
 button {
   height: 60px;
   background-color: #fff;
-  border-radius: 3px;
-  border: 1px solid #c4c4c4;
+  border-radius: 6px;
+  border: 1px solid #692a64;
   background-color: transparent;
   font-size: 2rem;
   color: #333;
   background-image: linear-gradient(to bottom,transparent,transparent 50%,rgba(0,0,0,.04));
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.05), inset 0 1px 0 0 rgba(255,255,255,.45), inset 0 -1px 0 0 rgba(255,255,255,.15), 0 1px 0 0 rgba(255,255,255,.15);
+  box-shadow: 1px 1px 1px black;
   text-shadow: 0 1px rgba(255,255,255,.4);
+  font-weight: bold;
+}
+
+.display{
+  text-align: right;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  width: 400px;
 }

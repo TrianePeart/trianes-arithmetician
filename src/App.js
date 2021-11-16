@@ -71,6 +71,14 @@ class App extends Component{
       } 
       
     }
+
+    negPos = () => {
+      const {current} = this.state;
+      this.setState({
+        current:
+          current[0] === '-' ? current.slice(1) : '-' + current,
+      });
+    };
       
 
     reset = () => {
@@ -97,16 +105,19 @@ class App extends Component{
   render() {
     console.log(this.state)
     return(
-      <div>
-       <div><h1>Triane's Arithmetician</h1></div>
-        <div className="calculator-body">
-          <MyComponent result={this.state.result} current={this.state.current} value={this.state.value}/>
+      <>
+      <div className="title"><h1>Triane's Arithmetician</h1></div>
+      <div className="calculator-body">
 
-          
-          <MyKeyPad onClick={this.onClick} calculate={this.calculate} Addition={this.Addition} Subtraction={this.Subtraction} Multiplication={this.Multiplication} Division={this.Division}/>
+        <div className="display">
+          <MyComponent result={this.state.result} current={this.state.current} value={this.state.value}/> 
+        </div>
+
+        <div className ="keypad">
+          <MyKeyPad onClick={this.onClick} calculate={this.calculate} Addition={this.Addition} Subtraction={this.Subtraction} Multiplication={this.Multiplication} Division={this.Division} negPos={this.negPos}/>
         </div>
     
-      </div>
+      </div></>
 
     );
   }

@@ -25,8 +25,7 @@ class MyKeyPad extends Component {
                <br/>
 
                
-               <button name="+/-" class="operator" onClick={b => this.props.onClick(b.target.name)}>+/-</button>
-               {/* create negative/positive button function inside of app JS */}
+               <button name="+/-" class="operator" onClick={this.props.negPos}>+/-</button>
                
                <button name="0" onClick={b => this.props.onClick(b.target.name)}>0</button>
                <button name="." class="decimal" onClick={b => this.props.onClick(b.target.name)}>.</button>
