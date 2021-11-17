@@ -48,7 +48,7 @@ class App extends Component{
   
       Multiplication = () => {
       const oldNumber = this.state.current
-      this.setState({current: "", operator: "multiplication", previous: oldNumber, value: this.state.value + " * "});
+      this.setState({current: "", operator: "multiplication", previous: oldNumber, value: this.state.value + " x "});
     
     }
   
@@ -76,7 +76,7 @@ class App extends Component{
       const {current} = this.state;
       this.setState({
         current:
-          current[0] === '-' ? current.slice(1) : '-' + current,
+          current[0] === '-' ? current.slice(1) : '-' + current
       });
     };
       
